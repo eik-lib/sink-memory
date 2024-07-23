@@ -20,7 +20,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:eik-lib/sink-memory.git"
+    "url": "git+ssh://git@github.com/eik-lib/sink-memory.git"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "author": "Trygve Lie",
   "license": "MIT",
@@ -30,7 +33,7 @@
   "homepage": "https://github.com/eik-lib/sink-memory#readme",
   "dependencies": {
     "@eik/common": "3.0.1",
-    "@eik/sink": "1.2.3"
+    "@eik/sink": "1.2.4"
   },
   "devDependencies": {
     "@semantic-release/changelog": "6.0.3",
