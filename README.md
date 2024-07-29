@@ -9,9 +9,9 @@ npm install @eik/sink-memory
 ```
 
 ```js
-const { pipeline } = require('stream');
-const express = require('express');
-const Sink = require('@eik/sink-memory');
+import { pipeline } from 'node:stream';
+import express from 'express';
+import Sink from '@eik/sink-memory';
 
 const app = express();
 const sink = new Sink();
@@ -46,7 +46,7 @@ This method takes the following arguments:
 Resolves with a writable stream.
 
 ```js
-const { pipeline } = require('stream);
+import { pipeline } from 'node:stream';
 
 const fromStream = new SomeReadableStream();
 const sink = new Sink({ ... });
@@ -74,7 +74,7 @@ the file and a readable stream with the byte stream of the file on the
 `.stream` property.
 
 ```js
-const { pipeline } = require('stream);
+import { pipeline } from 'node:stream';
 
 const toStream = new SomeWritableStream();
 const sink = new Sink({ ... });
