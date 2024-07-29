@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/eik-lib/sink-memory/compare/v1.1.0...v1.1.1) (2024-07-29)
+
+
+### Bug Fixes
+
+* publish types ([23f3463](https://github.com/eik-lib/sink-memory/commit/23f3463ee6db1995c2a75d07bc4efeca03efd931))
+
 # [1.1.0](https://github.com/eik-lib/sink-memory/compare/v1.0.1...v1.1.0) (2024-07-29)
 
 
