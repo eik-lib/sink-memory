@@ -1,9 +1,4 @@
 {
-  "extends": "./tsconfig.json",
-  "include": ["./tests/**/*.js"],
-  "compilerOptions": {
-    "module": "nodenext",
-    "moduleResolution": "nodenext",
-    "noEmit": true
-  }
+  "extends": "@eik/typescript-config/test.json",
+  "include": ["./tests/**/*.js"]
 }
