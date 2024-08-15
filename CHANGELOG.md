@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/eik-lib/sink-memory/compare/v1.1.1...v1.1.2) (2024-08-15)
+
+
+### Bug Fixes
+
+* generate URL pathnames on Windows hosts ([#5](https://github.com/eik-lib/sink-memory/issues/5)) ([0f37c07](https://github.com/eik-lib/sink-memory/commit/0f37c072b798611e97e911f37b74b25a4a08e744))
+
 ## [1.1.1](https://github.com/eik-lib/sink-memory/compare/v1.1.0...v1.1.1) (2024-07-29)
 
 
