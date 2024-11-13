@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/eik-lib/sink-memory/compare/v1.1.2...v1.1.3) (2024-11-13)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @metrics/client to v2.5.4 ([#12](https://github.com/eik-lib/sink-memory/issues/12)) ([5a248b8](https://github.com/eik-lib/sink-memory/commit/5a248b89e9b95720be679d6e86486e129784958b))
+
 ## [1.1.2](https://github.com/eik-lib/sink-memory/compare/v1.1.1...v1.1.2) (2024-08-15)
 
 
