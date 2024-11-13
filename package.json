@@ -34,7 +34,7 @@
   },
   "homepage": "https://github.com/eik-lib/sink-memory#readme",
   "dependencies": {
-    "@eik/common": "3.0.1",
+    "@eik/common": "5.0.0",
     "@eik/sink": "1.2.5",
     "@metrics/client": "2.5.4"
   },
@@ -44,11 +44,11 @@
     "@eik/semantic-release-config": "1.0.0",
     "@eik/typescript-config": "1.0.0",
     "eslint": "9.13.0",
-    "npm-run-all2": "5.0.2",
+    "npm-run-all2": "7.0.1",
     "prettier": "3.3.3",
     "rimraf": "6.0.1",
-    "semantic-release": "24.0.0",
-    "tap": "18.8.0",
-    "typescript": "5.5.4"
+    "semantic-release": "24.2.0",
+    "tap": "21.0.1",
+    "typescript": "5.6.3"
   }
 }
