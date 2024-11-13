@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/eik-lib/sink-memory/compare/v1.1.3...v2.0.0) (2024-11-13)
+
+
+### Bug Fixes
+
+* upgrade dependencies ([#13](https://github.com/eik-lib/sink-memory/issues/13)) ([c46549d](https://github.com/eik-lib/sink-memory/commit/c46549d8ce4cf931ad65c591485ce33a367801ce))
+
+
+### BREAKING CHANGES
+
+* Requires Node >=20.5.0
+
 ## [1.1.3](https://github.com/eik-lib/sink-memory/compare/v1.1.2...v1.1.3) (2024-11-13)
 
 
