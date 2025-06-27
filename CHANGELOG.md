@@ -1,3 +1,10 @@
+## [2.0.10](https://github.com/eik-lib/sink-memory/compare/v2.0.9...v2.0.10) (2025-06-27)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @metrics/client to v2.5.5 ([#37](https://github.com/eik-lib/sink-memory/issues/37)) ([0d2e5bb](https://github.com/eik-lib/sink-memory/commit/0d2e5bb64c174b4016434cbad755db76c5dfd57c))
+
 ## [2.0.9](https://github.com/eik-lib/sink-memory/compare/v2.0.8...v2.0.9) (2025-06-15)
 
 
