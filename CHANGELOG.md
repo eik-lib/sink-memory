@@ -1,3 +1,10 @@
+## [2.0.13](https://github.com/eik-lib/sink-memory/compare/v2.0.12...v2.0.13) (2025-12-12)
+
+
+### Bug Fixes
+
+* update eik/common ([81777dc](https://github.com/eik-lib/sink-memory/commit/81777dc32f6bd92ca61dc834a0fe3d55bb387692))
+
 ## [2.0.12](https://github.com/eik-lib/sink-memory/compare/v2.0.11...v2.0.12) (2025-09-09)
 
 
