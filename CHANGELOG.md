@@ -1,3 +1,10 @@
+## [2.0.17](https://github.com/eik-lib/sink-memory/compare/v2.0.16...v2.0.17) (2026-02-04)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @eik/common to v5.1.15 ([#60](https://github.com/eik-lib/sink-memory/issues/60)) ([64a9aac](https://github.com/eik-lib/sink-memory/commit/64a9aac5c3c8ef4356e3cb188357b52c24658629))
+
 ## [2.0.16](https://github.com/eik-lib/sink-memory/compare/v2.0.15...v2.0.16) (2026-02-04)
 
 
