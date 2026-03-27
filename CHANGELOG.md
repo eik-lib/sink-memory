@@ -1,3 +1,10 @@
+## [2.0.25](https://github.com/eik-lib/sink-memory/compare/v2.0.24...v2.0.25) (2026-03-27)
+
+
+### Bug Fixes
+
+* **deps:** update eik packages ([#70](https://github.com/eik-lib/sink-memory/issues/70)) ([d55462b](https://github.com/eik-lib/sink-memory/commit/d55462b2df635407603653a3efdd5c47e6ffd151))
+
 ## [2.0.24](https://github.com/eik-lib/sink-memory/compare/v2.0.23...v2.0.24) (2026-02-20)
 
 
