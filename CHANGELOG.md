@@ -1,3 +1,10 @@
+## [2.0.30](https://github.com/eik-lib/sink-memory/compare/v2.0.29...v2.0.30) (2026-05-27)
+
+
+### Bug Fixes
+
+* Bump dependencies ([8f17dc9](https://github.com/eik-lib/sink-memory/commit/8f17dc98c1755eeb12b24a8a5cff86929c8f693a))
+
 ## [2.0.29](https://github.com/eik-lib/sink-memory/compare/v2.0.28...v2.0.29) (2026-05-22)
 
 
