@@ -12,10 +12,10 @@
     "lib"
   ],
   "scripts": {
-    "clean": "rimraf .tap node_modules types",
+    "clean": "node -e \"['.tap', 'node_modules', 'types'].forEach(d => require('fs').rmSync(d, {recursive: true, force: true}))\"",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
-    "test": "tap --disable-coverage --allow-empty-coverage tests/**/*.js",
+    "test": "node --test 'test/**/*.js'",
     "types": "run-s types:module types:test",
     "types:module": "tsc",
     "types:test": "tsc --project tsconfig.test.json"
@@ -46,9 +46,7 @@
     "eslint": "10.4.0",
     "npm-run-all2": "9.0.1",
     "prettier": "3.8.3",
-    "rimraf": "6.1.3",
     "semantic-release": "25.0.3",
-    "tap": "21.7.4",
     "typescript": "6.0.3"
   }
 }
