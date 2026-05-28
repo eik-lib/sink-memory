@@ -1,3 +1,10 @@
+## [2.0.31](https://github.com/eik-lib/sink-memory/compare/v2.0.30...v2.0.31) (2026-05-28)
+
+
+### Bug Fixes
+
+* Replace Tap with node.js test runner ([3e2ca4b](https://github.com/eik-lib/sink-memory/commit/3e2ca4be36433365c472955ec7e9477c689c8abc))
+
 ## [2.0.30](https://github.com/eik-lib/sink-memory/compare/v2.0.29...v2.0.30) (2026-05-27)
 
 
