@@ -80,7 +80,7 @@ test("Sink() - .write() - ifNotExists rejects when file already exists", async (
 	// With ifNotExists, it must reject.
 	await assert.rejects(
 		sink.write(path, "text/plain", { ifNotExists: true }),
-		(err) => {
+		(/** @type {any} */ err) => {
 			assert.strictEqual(err.code, "ALREADY_EXISTS");
 			return true;
 		},
@@ -121,7 +121,7 @@ test("Sink() - .write() - ifGenerationMatch rejects when generation does not mat
 
 	await assert.rejects(
 		sink.write(path, "text/plain", { ifGenerationMatch: "wrong-generation" }),
-		(err) => {
+		(/** @type {any} */ err) => {
 			assert.strictEqual(err.code, "CONFLICT");
 			return true;
 		},
