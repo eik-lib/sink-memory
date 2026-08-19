@@ -67,3 +67,82 @@ test("Sink() - .exist() - File does not exist", async () => {
 	const sink = new Sink();
 	await assert.rejects(sink.exist("/does/not/exist.txt"));
 });
+
+// Regression tests for write() options and read() generation
+
+test("Sink() - .write() - ifNotExists rejects when file already exists", async () => {
+	const sink = new Sink();
+	const path = "/mem/foo/bar.txt";
+	const w1 = await sink.write(path, "text/plain");
+	await pipeline(Readable.from(["first"]), w1);
+
+	// Second write without option succeeds (overwrite) — current behaviour.
+	// With ifNotExists, it must reject.
+	await assert.rejects(
+		sink.write(path, "text/plain", { ifNotExists: true }),
+		(/** @type {any} */ err) => {
+			assert.strictEqual(err.code, "ALREADY_EXISTS");
+			return true;
+		},
+		"should reject with ALREADY_EXISTS when file already exists",
+	);
+});
+
+test("Sink() - .write() - ifNotExists succeeds when file does not exist", async () => {
+	const sink = new Sink();
+	const path = "/mem/foo/new.txt";
+
+	const w = await sink.write(path, "text/plain", { ifNotExists: true });
+	await assert.doesNotReject(
+		pipeline(Readable.from(["content"]), w),
+		"should succeed when file does not yet exist",
+	);
+	await assert.doesNotReject(sink.exist(path));
+});
+
+test("Sink() - .read() - returns a generation token", async () => {
+	const sink = new Sink();
+	const path = "/mem/foo/versioned.txt";
+	const w = await sink.write(path, "text/plain");
+	await pipeline(Readable.from(["v1"]), w);
+
+	const file = await sink.read(path);
+	assert.ok(
+		file.generation !== undefined && file.generation !== "",
+		"read() should return a non-empty generation token",
+	);
+});
+
+test("Sink() - .write() - ifGenerationMatch rejects when generation does not match", async () => {
+	const sink = new Sink();
+	const path = "/mem/foo/cas.txt";
+	const w1 = await sink.write(path, "text/plain");
+	await pipeline(Readable.from(["v1"]), w1);
+
+	await assert.rejects(
+		sink.write(path, "text/plain", { ifGenerationMatch: "wrong-generation" }),
+		(/** @type {any} */ err) => {
+			assert.strictEqual(err.code, "CONFLICT");
+			return true;
+		},
+		"should reject with CONFLICT when generation does not match",
+	);
+});
+
+test("Sink() - .write() - ifGenerationMatch succeeds when generation matches", async () => {
+	const sink = new Sink();
+	const path = "/mem/foo/cas2.txt";
+	const w1 = await sink.write(path, "text/plain");
+	await pipeline(Readable.from(["v1"]), w1);
+
+	const file = await sink.read(path);
+	const generation = file.generation;
+
+	const w2 = await sink.write(path, "text/plain", {
+		ifGenerationMatch: generation,
+	});
+	await assert.doesNotReject(
+		pipeline(Readable.from(["v2"]), w2),
+		"should succeed when generation matches",
+	);
+});
