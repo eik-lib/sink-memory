@@ -1,6 +1,6 @@
 {
   "name": "@eik/sink-memory",
-  "version": "2.1.0",
+  "version": "2.0.35",
   "description": "In-memory sink designed for tests.",
   "main": "lib/main.js",
   "types": "types/main.d.ts",
@@ -34,19 +34,19 @@
   },
   "homepage": "https://github.com/eik-lib/sink-memory#readme",
   "dependencies": {
-    "@eik/common": "5.2.0",
+    "@eik/common": "5.1.32",
     "@eik/sink": "1.2.7",
     "@metrics/client": "2.5.5"
   },
   "devDependencies": {
-    "@eik/eslint-config": "2.0.15",
+    "@eik/eslint-config": "2.0.7",
     "@eik/prettier-config": "1.0.2",
-    "@eik/semantic-release-config": "1.0.19",
+    "@eik/semantic-release-config": "1.0.17",
     "@eik/typescript-config": "1.0.2",
     "eslint": "10.4.1",
-    "npm-run-all2": "9.0.3",
+    "npm-run-all2": "9.0.1",
     "prettier": "3.8.3",
-    "semantic-release": "25.0.8",
+    "semantic-release": "25.0.3",
     "typescript": "6.0.3"
   }
 }

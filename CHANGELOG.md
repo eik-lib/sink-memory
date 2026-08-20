@@ -1,29 +1,3 @@
-# [2.1.0](https://github.com/eik-lib/sink-memory/compare/v2.0.37...v2.1.0) (2026-08-19)
-
-
-### Bug Fixes
-
-* type assert.rejects callback parameter as any for TypeScript 7 ([5ae99c6](https://github.com/eik-lib/sink-memory/commit/5ae99c65e633e31712eedd42e3419f6ca341aaf6))
-
-
-### Features
-
-* add write() options for atomic writes and generation to read() ([4a3d237](https://github.com/eik-lib/sink-memory/commit/4a3d2376a8720e20873438310ab9e5d3f078d457))
-
-## [2.0.37](https://github.com/eik-lib/sink-memory/compare/v2.0.36...v2.0.37) (2026-06-20)
-
-
-### Bug Fixes
-
-* **deps:** update eik packages ([#88](https://github.com/eik-lib/sink-memory/issues/88)) ([2e63c44](https://github.com/eik-lib/sink-memory/commit/2e63c44e5dc1f55f83d69b3dc2a57341ab701db4))
-
-## [2.0.36](https://github.com/eik-lib/sink-memory/compare/v2.0.35...v2.0.36) (2026-06-10)
-
-
-### Bug Fixes
-
-* **deps:** update eik packages to v5.1.33 ([#86](https://github.com/eik-lib/sink-memory/issues/86)) ([12ad295](https://github.com/eik-lib/sink-memory/commit/12ad295cc4a1ecca242c90fcbca866bf7fe65a6b))
-
 ## [2.0.35](https://github.com/eik-lib/sink-memory/compare/v2.0.34...v2.0.35) (2026-06-09)
 
 
