@@ -1,3 +1,10 @@
+# [2.2.0](https://github.com/eik-lib/sink-memory/compare/v2.1.0...v2.2.0) (2026-08-20)
+
+
+### Features
+
+* revert to pre-atomic-write implementation ([e02c343](https://github.com/eik-lib/sink-memory/commit/e02c3432b5c7beea886b059cfccc8113ec3217aa))
+
 ## [2.0.35](https://github.com/eik-lib/sink-memory/compare/v2.0.34...v2.0.35) (2026-06-09)
 
 
