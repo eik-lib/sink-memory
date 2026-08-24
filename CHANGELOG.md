@@ -1,3 +1,10 @@
+# [2.3.0](https://github.com/eik-lib/sink-memory/compare/v2.2.2...v2.3.0) (2026-08-24)
+
+
+### Features
+
+* accept optional options parameter in write() ([42b3b27](https://github.com/eik-lib/sink-memory/commit/42b3b27c85c13dc221fcd2677ae5b41e8804afac))
+
 ## [2.2.2](https://github.com/eik-lib/sink-memory/compare/v2.2.1...v2.2.2) (2026-08-21)
 
 
