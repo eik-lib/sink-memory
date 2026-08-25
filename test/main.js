@@ -4,6 +4,11 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import Sink from "../lib/main.js";
 
+const RE_ILLEGAL_FILE_PATH = /Argument must be a String/;
+const RE_ILLEGAL_CONTENT_TYPE = /Argument must be a String/;
+const RE_DIRECTORY_TRAVERSAL = /Directory traversal/;
+const RE_DOES_NOT_EXIST = /does not exist/;
+
 test("Sink() - Object type", () => {
 	const sink = new Sink();
 	const name = Object.prototype.toString.call(sink);
@@ -66,4 +71,47 @@ test("Sink() - .exist() - File exists", async () => {
 test("Sink() - .exist() - File does not exist", async () => {
 	const sink = new Sink();
 	await assert.rejects(sink.exist("/does/not/exist.txt"));
+});
+
+test("Sink() - .writeBuffer() - should write a buffer and allow reading it back", async () => {
+	const sink = new Sink();
+	await sink.writeBuffer(
+		"/buf/data.json",
+		"application/json",
+		Buffer.from('{"ok":true}'),
+	);
+	const result = await sink.readBuffer("/buf/data.json");
+	assert.ok(Buffer.isBuffer(result), "should return a Buffer");
+	assert.strictEqual(result.toString(), '{"ok":true}');
+});
+
+test("Sink() - .writeBuffer() - arguments is illegal", async () => {
+	const sink = new Sink();
+	await assert.rejects(
+		// @ts-ignore
+		sink.writeBuffer(300, "application/json", Buffer.from("x")),
+		RE_ILLEGAL_FILE_PATH,
+	);
+	await assert.rejects(
+		// @ts-ignore
+		sink.writeBuffer("/valid/path.js", 300, Buffer.from("x")),
+		RE_ILLEGAL_CONTENT_TYPE,
+	);
+});
+
+test("Sink() - .writeBuffer() - directory traversal prevention", async () => {
+	const sink = new Sink({ rootPath: "/eik" });
+	await assert.rejects(
+		sink.writeBuffer(
+			"../../sensitive.data",
+			"application/octet-stream",
+			Buffer.from("x"),
+		),
+		RE_DIRECTORY_TRAVERSAL,
+	);
+});
+
+test("Sink() - .readBuffer() - file does not exist", async () => {
+	const sink = new Sink();
+	await assert.rejects(sink.readBuffer("/missing/file.js"), RE_DOES_NOT_EXIST);
 });
