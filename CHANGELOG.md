@@ -1,3 +1,10 @@
+# [2.4.0](https://github.com/eik-lib/sink-memory/compare/v2.3.0...v2.4.0) (2026-08-25)
+
+
+### Features
+
+* add writeBuffer() and readBuffer() methods ([3cec646](https://github.com/eik-lib/sink-memory/commit/3cec646db0e1b62dfdbf78eac616d658be3afb60))
+
 # [2.3.0](https://github.com/eik-lib/sink-memory/compare/v2.2.2...v2.3.0) (2026-08-24)
 
 
