@@ -35,7 +35,7 @@
   "homepage": "https://github.com/eik-lib/sink-memory#readme",
   "dependencies": {
     "@eik/common": "5.2.1",
-    "@eik/sink": "1.2.7",
+    "@eik/sink": "1.4.0",
     "@metrics/client": "2.5.5"
   },
   "devDependencies": {
